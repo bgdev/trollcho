@@ -8,10 +8,10 @@
 #   None
 #
 # Commands:
-#   hubot what should I do about (.*)
-#   hubot what do you think about (.*)
-#   hubot how do you handle (.*)
-#   hubot I need some advice
+#   trollcho what should I do about (.*)
+#   trollcho what do you think about (.*)
+#   trollcho how do you handle (.*)
+#   trollcho I need some advice
 #
 # Author:
 #   pengwynn

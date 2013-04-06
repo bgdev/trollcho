@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot ascii me <text> - Show text in ascii art
+#   trollcho ascii me <text> - Show text in ascii art
 #
 # Author:
 #   atmos

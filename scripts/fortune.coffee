@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot fortune me - Displays a super true fortune
+#   trollcho fortune me - Displays a super true fortune
 #
 # Author:
 #   mrtazz

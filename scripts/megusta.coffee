@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   me gusta - Display "Me Gusta" face when heard
+#   trollcho me gusta - Display "Me Gusta" face when heard
 #
 # Author:
 #   phyreman

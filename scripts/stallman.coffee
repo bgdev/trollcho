@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot stallman - Returns a Richard Stallman fact.
+#   trollcho stallman - Returns a Richard Stallman fact.
 #
 # Author:
 #   marsam

@@ -5,15 +5,15 @@
 #   "htmlparser": "1.8.0"
 #   "soupselect": "0.2.0"
 #   "validator" : "0.4.20"
-# 
+#
 # Configuration:
 #   None
 #
 # Commands:
-#   hubot daily deal - <It will show you Steam's daily deal>
+#   trollcho daily deal - <It will show you Steam's daily deal>
 #
 # Notes:
-#   soupselect depends on htmlparser so install both using "npm install soupselect" and "npm install htmlparser". Don't forget: "npm install validator" 
+#   soupselect depends on htmlparser so install both using "npm install soupselect" and "npm install htmlparser". Don't forget: "npm install validator"
 #   You might need to be root user to install the dependencies
 #
 # Author:
@@ -40,13 +40,13 @@ getDeals = (msg, callback) ->
 parseDeals = (body, selector) ->
   handler = new HTMLParser.DefaultHandler((()->), ignoreWhitespace: true)
   parser = new HTMLParser.Parser handler
-  parser.parseComplete body 
+  parser.parseComplete body
   dealObj = Select(handler.dom, selector)[0]
   if dealObj?
     originalPrice = Select(handler.dom, '.dailydeal_content .discount_original_price')[0]
     finalPrice = Select(handler.dom, '.dailydeal_content .discount_final_price')[0]
     deal = "From #{sanitize(originalPrice.children[0].data).entityDecode().trim()} to #{sanitize(finalPrice.children[0].data).entityDecode().trim()}  #{dealObj.children[0].attribs.src}  #{dealObj.attribs.href}"
-  else 
+  else
     msg.send "No daily deal found"
 
 

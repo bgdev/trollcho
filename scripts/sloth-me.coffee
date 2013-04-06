@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   sloth me - Sends a sloth image URL
+#   trollcho sloth me - Sends a sloth image URL
 #
 # Author:
 #   NickPresta

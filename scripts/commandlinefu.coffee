@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot commandlinefu me - returns random command
-#   hubot commandlinefu me <command> - random entry for the comand passed
+#   trollcho commandlinefu me - returns random command
+#   trollcho commandlinefu me <command> - random entry for the comand passed
 #
 # Author:
 #   aaronott
@@ -18,7 +18,7 @@ module.exports = (robot) ->
   robot.respond /commandlinefu(?: me)? *(.*)?/i, (msg) ->
     query = if msg.match[1]
           "matching/#{msg.match[1]}/#{new Buffer(msg.match[1]).toString('base64')}/json"
-        else 
+        else
           "random/json"
     command msg, "http://www.commandlinefu.com/commands/#{query}", (cmd) ->
       msg.send cmd

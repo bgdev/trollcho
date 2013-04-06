@@ -8,9 +8,9 @@
 #   None
 #
 # Commands:
-#   hubot urban me <term>         - Searches Urban Dictionary and returns definition
-#   hubot urban define me <term>  - Searches Urban Dictionary and returns definition
-#   hubot urban example me <term> - Searches Urban Dictionary and returns example 
+#   trollcho urban me <term>         - Searches Urban Dictionary and returns definition
+#   trollcho urban define me <term>  - Searches Urban Dictionary and returns definition
+#   trollcho urban example me <term> - Searches Urban Dictionary and returns example
 #
 # Author:
 #   Travis Jeffery (@travisjeffery)

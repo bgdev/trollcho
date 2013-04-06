@@ -9,7 +9,7 @@
 #   None
 #
 # Commands:
-#   hubot phpdoc for <function> - Shows PHP function information.
+#   trollcho phpdoc for <function> - Shows PHP function information.
 #
 # Author:
 #   nebiros

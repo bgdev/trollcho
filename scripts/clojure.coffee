@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot clojure|clj <script> - Evaluate one line of Clojure script
+#   trollcho clojure|clj <script> - Evaluate one line of Clojure script
 #
 # Author:
 #   jingweno

@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot lmgtfy <optional @username> <some query>
+#   trollcho lmgtfy <optional @username> <some query>
 #
 # Author:
 #   phlipper

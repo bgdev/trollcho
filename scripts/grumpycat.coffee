@@ -9,8 +9,8 @@
 #   None
 #
 # Commands:
-#   hubot grumpycat me - Receive a Grumpy Cat
-#   hubot grumpycat bomb N - get N Grumpy Cats
+#   trollcho grumpycat me - Receive a Grumpy Cat
+#   trollcho grumpycat bomb N - get N Grumpy Cats
 #
 # Author:
 #   trey

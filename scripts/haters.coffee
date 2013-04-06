@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   haters - Returns a random haters gonna hate url
+#   trollcho haters - Returns a random haters gonna hate url
 #
 # Author:
 #   atmos

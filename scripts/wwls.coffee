@@ -1,9 +1,9 @@
 # Description:
-#   What would Linus Say? 
+#   What would Linus Say?
 #   Get a random inspirational quote from Linus Torvalds.
 #
 # Commands:
-#   hubot what would linus say?
+#   trollcho what would linus say?
 #
 # Author:
 #   ticean

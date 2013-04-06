@@ -9,10 +9,10 @@
 #   None
 #
 # Commands:
-#   hubot 9gag me - Returns a random meme image
+#   trollcho 9gag me - Returns a random meme image
 #
 # Author:
-#   EnriqueVidal 
+#   EnriqueVidal
 
 Select      = require( "soupselect" ).select
 HTMLParser  = require "htmlparser"

@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot bing me <query> - Bings <query> & returns 1st result's URL
+#   trollcho bing me <query> - Bings <query> & returns 1st result's URL
 #
 # Author:
 #   Brandon Satrom

@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot wat - Random WAT
+#   trollcho wat - Random WAT
 #
 # Author:
 #   john-griffin

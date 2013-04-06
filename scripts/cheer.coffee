@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot cheer me up - A little pick me up
+#   trollcho cheer me up - A little pick me up
 #
 # Author:
 #   carllerche

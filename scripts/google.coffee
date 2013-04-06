@@ -1,6 +1,6 @@
 # Description:
 #   Returns the URL of the first google hit for a query
-# 
+#
 # Dependencies:
 #   None
 #
@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot google me <query> - Googles <query> & returns 1st result's URL
+#   trollcho google me <query> - Googles <query> & returns 1st result's URL
 #
 # Author:
 #   searls

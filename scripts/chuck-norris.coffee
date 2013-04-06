@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot chuck norris -- random Chuck Norris awesomeness
-#   hubot chuck norris me <user> -- let's see how <user> would do as Chuck Norris
+#   trollcho chuck norris -- random Chuck Norris awesomeness
+#   trollcho chuck norris me <user> -- let's see how <user> would do as Chuck Norris
 #
 # Author:
 #   dlinsin
@@ -22,7 +22,7 @@ module.exports = (robot) ->
       askChuck msg, "http://api.icndb.com/jokes/random"
     else
       askChuck msg, "http://api.icndb.com/jokes/random?firstName="+user+"&lastName="
-  
+
   askChuck = (msg, url) ->
     msg.http(url)
       .get() (err, res, body) ->
