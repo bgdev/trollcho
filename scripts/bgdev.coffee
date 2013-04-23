@@ -3,6 +3,8 @@
 #
 # Dependencies:
 #   feedparser >= 0.15.2
+#   iconv      >= 2.0.5
+#   request    >= 2.20.0
 #
 # Configuration:
 #   None
@@ -19,12 +21,12 @@ request = require 'request'
 
 module.exports = (robot) ->
   robot.respond /(bgdev|bgd)\s+(\d+)/i, (msg)->
-    n = parseInt msg.match[2], 10
-    if isNaN(n) or n < 1
-      msg.reply 'Чичо, параметърът трябва да е цяло положително число под 4'
+    n = +msg.match[2]
+    if n < 1
+      msg.reply 'кажи ми сега каква е тази нула...'
       return
     else if n > 4
-      msg.reply 'Ако плюя над 4 реда, ще ме кикнат ;('
+      msg.reply 'ако плюя над 4 реда, ще ме кикнат ;('
       return
 
     body = ''
@@ -35,7 +37,7 @@ module.exports = (robot) ->
       chunk = data.toString()
       body += chunk
 
-      if /<\/rss>\s*/.test(chunk)
+      if /<\/rss>\s*$/.test(chunk)
         FeedParser.parseString(
           body,
           (err, meta, articles) ->
