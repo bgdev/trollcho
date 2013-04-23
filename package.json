@@ -24,7 +24,10 @@
     "jsdom": ">= 0.5.5",
     "jquery": ">= 1.7.4",
     "validator": ">= 0.4.28",
-    "querystring": ">= 0.2.0"
+    "querystring": ">= 0.2.0",
+    "feedparser": ">= 0.15.2",
+    "request": ">= 2.20.0",
+    "iconv": ">= 2.0.5"
   },
   "engines": {
     "node": ">= 0.8.x",
