@@ -13,5 +13,5 @@
 
 module.exports = (robot) ->
   robot.respond /help\s*(.*)?$/i, (msg) ->
-    link = "Bot commands -> https://gist.github.com/mytrile/eb64ac49cab34589198f"
+    link = "Bot commands -> https://github.com/bgdev/trollcho/blob/master/README.md"
     msg.send link

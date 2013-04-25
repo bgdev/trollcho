@@ -1,179 +1,69 @@
-# Hubot
+#Trollcho - #bgdev bot
 
-This is a version of GitHub's Campfire bot, hubot. He's pretty cool.
+## BGDev forum
 
-This version is designed to be deployed on [Heroku][heroku].
+    > trollcho bgdev | bgd <num> - Show last <num> posts in the forum
+    > trollcho short | sh  <url> - Shorten the given url
 
-[heroku]: http://www.heroku.com
+##Search
 
-## Playing with Hubot
+    > trollcho google me <query> - Googles <query> & returns 1st result's URL
+    > trollcho bing me <query> - Bings <query> & returns 1st result's URL
+    > trollcho youtube me <query> - Searches YouTube for the query and returns the video embed link.
+    > trollcho image me <query> - queries Google Images for <query> and returns a random top result.
+    > trollcho animate me <query> - The same thing as `image me`, return an animated GIF instead.
+    > trollcho map me <query> - Returns a map view of the area returned by `query`.
+    > trollcho lmgtfy <optional @username> <query>
 
-You'll need to install the necessary dependencies for hubot. All of
-those dependencies are provided by [npm][npmjs].
+##Programming languages
+    > trollcho ruby|rb <script> - Evaluate one line of Ruby script
+    > trollcho clojure|clj <script> - Evaluate one line of Clojure script
+    > trollcho phpdoc for <function> - Shows PHP function information.
 
-[npmjs]: http://npmjs.org
+##Geek stuff
+    > trollcho ascii me <text> - Show text in ascii art
+    > trollcho commandlinefu me - returns random command
+    > trollcho commandlinefu me <command> - random entry for the comand passed
+    > trollcho what would linus say?
+    > trollcho stallman - Returns a Richard Stallman fact.
+    > trollcho xkcd <num> - XKCD comic <num>
+    > trollcho xkcd [latest]- The latest XKCD comic
+    > trollcho xkcd random - XKCD comic <num>
+    > trollcho yoda quote - Returns a random yoda quote
+    > trollcho show me dilbert - gets the daily dilbert
 
-## HTTP Listener
+##Games
+    > trollcho daily deal - <It will show you Steam's daily deal>
 
-Hubot has a HTTP listener which listens on the port specified by the `PORT`
-environment variable.
+##Math
+    > trollcho math me <expression> - Calculate the given expression.
+    > trollcho convert me <expression> to <units> - Convert expression to given units.
 
-You can specify routes to listen on in your scripts by using the `router`
-property on `robot`.
+##Misc
+    > pug bomb N - get N pugs
+    > pug me - Receive a pug
+    > trollcho wat - Random WAT
+    > trollcho chuck norris -- random Chuck Norris awesomeness
+    > trollcho chuck norris me <user> -- let's see how <user> would do as Chuck Norris
+    > trollcho 9gag me - Returns a random meme image
+    > trollcho urban define me <term>  - Searches Urban Dictionary and returns definition
+    > trollcho urban example me <term> - Searches Urban Dictionary and returns example
+    > trollcho urban me <term>         - Searches Urban Dictionary and returns definition
+    > trollcho mustache me <query> - Searches Google Images for the specified query and mustaches it.
+    > trollcho mustache me <url> - Adds a mustache to the specified URL.
+    > trollcho ship it - Display a motivation squirrel
 
-```coffeescript
-module.exports = (robot) ->
-  robot.router.get "/hubot/version", (req, res) ->
-    res.end robot.version
-```
+##System
+    > trollcho show storage - Display the contents that are persisted in the brain
+    > trollcho show users - Display all users that trollcho knows about
+    > trollcho the rules - Make sure trollcho still knows the rules.
+    > trollcho time - Reply with current time
+    > trollcho uptime - Outputs bot uptime
+    > trollcho help - Displays all of the help commands that trollcho knows about.
+    > trollcho who is <user> - see what roles a user has
+    > trollcho <user> is a badass guitarist - assign a role to a user
+    > trollcho <user> is not a badass guitarist - remove a role from a user
 
-There are functions for GET, POST, PUT and DELETE, which all take a route and
-callback function that accepts a request and a response.
+##Meta
 
-### Redis
-
-If you are going to use the `redis-brain.coffee` script from `hubot-scripts`
-you will need to add the Redis to Go addon on Heroku which requires a verified
-account or you can create an account at [Redis to Go][redistogo] and manually
-set the `REDISTOGO_URL` variable.
-
-    % heroku config:add REDISTOGO_URL="..."
-
-If you don't require any persistence feel free to remove the
-`redis-brain.coffee` from `hubot-scripts.json` and you don't need to worry
-about redis at all.
-
-[redistogo]: https://redistogo.com/
-
-### Testing Hubot Locally
-
-You can test your hubot by running the following.
-
-    % bin/hubot
-
-You'll see some start up output about where your scripts come from and a
-prompt.
-
-    [Sun, 04 Dec 2011 18:41:11 GMT] INFO Loading adapter shell
-    [Sun, 04 Dec 2011 18:41:11 GMT] INFO Loading scripts from /home/tomb/Development/hubot/scripts
-    [Sun, 04 Dec 2011 18:41:11 GMT] INFO Loading scripts from /home/tomb/Development/hubot/src/scripts
-    Hubot>
-
-Then you can interact with hubot by typing `hubot help`.
-
-    Hubot> hubot help
-
-    Hubot> animate me <query> - The same thing as `image me`, except adds a few
-    convert me <expression> to <units> - Convert expression to given units.
-    help - Displays all of the help commands that Hubot knows about.
-    ...
-
-Take a look at the scripts in the `./scripts` folder for examples.
-Delete any scripts you think are silly.  Add whatever functionality you
-want hubot to have.
-
-## Adapters
-
-Adapters are the interface to the service you want your hubot to run on. This
-can be something like Campfire or IRC. There are a number of third party
-adapters that the community have contributed. Check the
-[hubot wiki][hubot-wiki] for the available ones.
-
-If you would like to run a non-Campfire or shell adapter you will need to add
-the adapter package as a dependency to the `package.json` file in the
-`dependencies` section.
-
-Once you've added the dependency and run `npm install` to install it you can
-then run hubot with the adapter.
-
-    % bin/hubot -a <adapter>
-
-Where `<adapter>` is the name of your adapter without the `hubot-` prefix.
-
-[hubot-wiki]: https://github.com/github/hubot/wiki
-
-## hubot-scripts
-
-There will inevitably be functionality that everyone will want. Instead
-of adding it to hubot itself, you can submit pull requests to
-[hubot-scripts][hubot-scripts].
-
-To enable scripts from the hubot-scripts package, add the script name with
-extension as a double quoted string to the `hubot-scripts.json` file in this
-repo.
-
-[hubot-scripts]: https://github.com/github/hubot-scripts
-
-## external-scripts
-
-Tired of waiting for your script to be merged into `hubot-scripts`? Want to
-maintain the repository and package yourself? Then this added functionality
-maybe for you!
-
-Hubot is now able to load scripts from third-party `npm` packages! To enable
-this functionality you can follow the following steps.
-
-1. Add the packages as dependencies into your `package.json`
-2. `npm install` to make sure those packages are installed
-
-To enable third-party scripts that you've added you will need to add the package
-name as a double quoted string to the `external-scripts.json` file in this repo.
-
-## Deployment
-
-    % heroku create --stack cedar
-    % git push heroku master
-    % heroku ps:scale app=1
-
-If your Heroku account has been verified you can run the following to enable
-and add the Redis to Go addon to your app.
-
-    % heroku addons:add redistogo:nano
-
-If you run into any problems, checkout Heroku's [docs][heroku-node-docs].
-
-You'll need to edit the `Procfile` to set the name of your hubot.
-
-More detailed documentation can be found on the
-[deploying hubot onto Heroku][deploy-heroku] wiki page.
-
-### Deploying to UNIX or Windows
-
-If you would like to deploy to either a UNIX operating system or Windows.
-Please check out the [deploying hubot onto UNIX][deploy-unix] and
-[deploying hubot onto Windows][deploy-windows] wiki pages.
-
-[heroku-node-docs]: http://devcenter.heroku.com/articles/node-js
-[deploy-heroku]: https://github.com/github/hubot/wiki/Deploying-Hubot-onto-Heroku
-[deploy-unix]: https://github.com/github/hubot/wiki/Deploying-Hubot-onto-UNIX
-[deploy-windows]: https://github.com/github/hubot/wiki/Deploying-Hubot-onto-Windows
-
-## Campfire Variables
-
-If you are using the Campfire adapter you will need to set some environment
-variables. Refer to the documentation for other adapters and the configuraiton
-of those, links to the adapters can be found on the [hubot wiki][hubot-wiki].
-
-Create a separate Campfire user for your bot and get their token from the web
-UI.
-
-    % heroku config:add HUBOT_CAMPFIRE_TOKEN="..."
-
-Get the numeric IDs of the rooms you want the bot to join, comma delimited. If
-you want the bot to connect to `https://mysubdomain.campfirenow.com/room/42` 
-and `https://mysubdomain.campfirenow.com/room/1024` then you'd add it like this:
-
-    % heroku config:add HUBOT_CAMPFIRE_ROOMS="42,1024"
-
-Add the subdomain hubot should connect to. If you web URL looks like
-`http://mysubdomain.campfirenow.com` then you'd add it like this:
-
-    % heroku config:add HUBOT_CAMPFIRE_ACCOUNT="mysubdomain"
-
-[hubot-wiki]: https://github.com/github/hubot/wiki
-
-## Restart the bot
-
-You may want to get comfortable with `heroku logs` and `heroku restart`
-if you're having issues.
-
+* Maintained by [mytrile](http://gihtub.com/mytrile)
