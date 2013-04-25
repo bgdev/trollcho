@@ -66,4 +66,4 @@
 
 ##Meta
 
-* Maintained by [mytrile](http://gihtub.com/mytrile)
+* Maintained by [BGDev organization members](https://github.com/bgdev?tab=members)
