@@ -30,18 +30,17 @@ shorten = (url, cb) ->
     json:
       longUrl: url,
     (error, response, body) ->
-      # console.log error, response, body
       cb error, body?.id
 
 
 module.exports = (robot) ->
-  robot.respond /(bgdev|bgd)\s+(\d+)/i, (msg)->
-    n = +msg.match[2]
+  robot.respond /(bgdev|bgd)(\s+(\d+))?/i, (msg)->
+    n = if msg.match[3] then +msg.match[3] else 5
     if n < 1
       msg.reply 'кажи ми сега каква е тази нула...'
       return
-    else if n > 4
-      msg.reply 'ако плюя над 4 реда, ще ме кикнат ;('
+    else if n > 5
+      msg.reply 'ако плюя над 5 реда, ще ме кикнат ;('
       return
 
     body = ''
